@@ -9,8 +9,12 @@ def uint8_to_float(img):
 
 
 def float_to_uint8(img):
+    print('ftu8 1')
+    print(img.shape, img.itemsize/1024/1024)
     result = np.ndarray(shape=img.shape, dtype='uint8')
+    print('ftu8 2')
     result[:] = img * 255
+    print('ftu8 3')
     return result
 
 
